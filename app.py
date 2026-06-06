@@ -112,6 +112,22 @@ st.markdown("""
         line-height: 1.5;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
     }
+    
+    /* Hide all Streamlit default elements, header, footer, and the top toolbar (Fork, GitHub) */
+    #MainMenu {visibility: hidden; display: none !important;}
+    header {visibility: hidden; display: none !important;}
+    footer {visibility: hidden; display: none !important;}
+    .stAppDeployButton {display: none !important;}
+    [data-testid="stAppToolbar"] {display: none !important;}
+    [data-testid="stHeader"] {display: none !important;}
+    .stDecoration {display: none !important;}
+    .viewerBadge {display: none !important;}
+    
+    /* Adjust top spacing for clean full-screen WebView look */
+    .block-container {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
